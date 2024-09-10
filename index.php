@@ -18,7 +18,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php?menu=home">Home</a>
                   </li>
                   <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -28,7 +28,7 @@
                         Tutores
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="lista-tutores.php">Lista de Tutores</a></li>
+                      <li><a class="dropdown-item" href="index.php?menu=tutores">Lista de Tutores</a></li>
                       <li><a class="dropdown-item" href="#">Cadastro de Tutores</a></li>
                       <!-- Mais um item da lista do dropdown com linha divisoria -->
                       <!-- <li><hr class="dropdown-divider"></li>
@@ -40,7 +40,7 @@
                         Animais
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="lista-animais.php">Lista de Animais</a></li>
+                      <li><a class="dropdown-item" href="index.php?menu=animais">Lista de Animais</a></li>
                       <li><a class="dropdown-item" href="#">Cadastro de Animais</a></li>
                     </ul>
                   </li>
@@ -54,6 +54,35 @@
             </div>
           </nav>
     </header>
+
+<main>
+  <?php
+    if(isset($_GET["menu"])){
+      $menu = $_GET["menu"];
+    } else {
+      $menu = "";
+    }
+
+    switch ($menu) {
+      case 'animais':
+        include("lista-animais.php");
+        break;
+
+      case 'home':
+        include("home.php");
+        break;
+      
+      case 'tutores':
+        include("lista-tutores.php");
+        break;
+
+      default:
+        include("home.php");
+        break;
+    }
+
+  ?>
+</main>
 
 
 
