@@ -66,4 +66,23 @@ class TutorDAO
             echo $e->getMessage();
         }
     }
+
+    public function search($id)
+    {
+        require_once "../config.php";
+
+        try {
+            // Consulta
+            $query = "SELECT * FROM base WHERE id = :ID";
+
+            $stmt = $pdo->prepare($query);
+
+            $stmt->bindvalue(":ID", $id);
+
+            $stmt->execute();
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 }

@@ -12,18 +12,17 @@
                 </thead>
                 <tbody class="table-group-divider">
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Stamm</td>
-                        <td>19 99999 9999</td>
-                        <td>Rua não sei das quantas 999 Sumaré</td>
+                        <th scope="row"><?php echo $tutor["id"] ?></th>
+                        <td><?php echo $tutor["tutorNome"] ?></td>
+                        <td><?php echo $tutor["tutorTelefone"] ?></td>
+                        <td><?php echo $tutor["tutorEndereco"] ?></td>
                         <td>
                             <div class="dropdown">
                                 <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-paw"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdowm-item btn btn-outline-success mb-1 container-fluid" role="button" href="#">Nino</a></li>
-                                    <li><a class="dropdowm-item btn btn-outline-success mb-1 container-fluid" role="button" href="#">Nina</a></li>
+                                    <li><a class="dropdowm-item btn btn-outline-success mb-1 container-fluid" role="button" href="#"><?php echo $tutor["animalTutor"] ?></a></li>
                                 </ul>
                             </div>
                         </td>
