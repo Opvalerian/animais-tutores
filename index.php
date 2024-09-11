@@ -29,7 +29,7 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="index.php?menu=tutores">Lista de Tutores</a></li>
-                      <li><a class="dropdown-item" href="#">Cadastro de Tutores</a></li>
+                      <li><a class="dropdown-item" href="index.php?menu=cad-tutor">Cadastro de Tutores</a></li>
                       <!-- Mais um item da lista do dropdown com linha divisoria -->
                       <!-- <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li> -->
@@ -74,6 +74,14 @@
       
       case 'tutores':
         include("lista-tutores.php");
+        break;
+
+      case 'cad-tutor':
+        include("cadastros/cad-tutor.php");
+        break;
+
+      case 'inserir-tutor':
+        include("inserir/inserir-tutor.php");
         break;
 
       default:

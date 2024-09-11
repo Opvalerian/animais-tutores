@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:host=localhost;dbname=base';//Data Source Name
+$dsn = 'mysql:host=localhost;dbname=petsitterdb';//Data Source Name
 $username = 'root'; // Usuário
 $password = ''; // Senha
 
